@@ -8,5 +8,4 @@ target_include_directories(DDS_engine PUBLIC src)
 
 add_executable(DDS_engine_test tests/TestMain.cpp)
 
-
 target_link_libraries(DDS_engine_test DDS_engine)
