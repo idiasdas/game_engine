@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include "dds_engine/Application.h"
+#include "dds_engine/Log.h"
 
 // --------------------------------------
 // Entry point for the client application
