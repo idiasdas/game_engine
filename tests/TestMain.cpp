@@ -1,7 +1,19 @@
 #include <dds_engine.h>
 
-int main() {
-    dds::Application engine;
-    engine.Run();
-    return 0;
+class TestApp : public dds::Application
+{
+public:
+    TestApp()
+    {
+
+    }
+    ~TestApp()
+    {
+
+    }
+};
+
+dds::Application* dds::CreateApplication()
+{
+    return new TestApp();
 }
