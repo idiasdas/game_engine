@@ -1,8 +1,10 @@
 #pragma once
 
+#include "Core.h"
+
 namespace dds{
 
-    class Application
+    class DDS_API Application
     {
     public:
         Application();
