@@ -1,5 +1,6 @@
 #include "Application.h"
-#include <iostream>
+#include "dds_engine/Events/ApplicationEvent.h"
+#include "dds_engine/Log.h"
 
 namespace dds{
 
@@ -13,7 +14,16 @@ namespace dds{
 
     void Application::Run()
     {
-        std::cout << "Hello, DDS Engine! Application is running..." << '\n';
+        DDS_TRACE("Application running");
+        WindowResizeEvent e(1280, 720);
+        if(e.IsInCategory(EventCategoryApplication))
+        {
+            DDS_TRACE(e);
+        }
+        if(e.IsInCategory(EventCategoryInput))
+        {
+            DDS_TRACE(e);
+        }
         while(true);
     }
 }

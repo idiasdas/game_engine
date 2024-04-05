@@ -12,7 +12,8 @@ add_library(DDS_engine SHARED
         src/dds_engine/Log.cpp
         src/dds_engine/Core.cpp)
 
-target_include_directories(DDS_engine PUBLIC src)
+target_include_directories(DDS_engine PUBLIC src
+        src/dds_engine/Events)
 
 add_subdirectory(vendor/spdlog)
 
