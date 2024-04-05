@@ -5,3 +5,5 @@
 #else
     #define DDS_API
 #endif
+
+#define BIT(x) (1 << x)
