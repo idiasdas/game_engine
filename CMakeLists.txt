@@ -7,7 +7,10 @@ add_compile_definitions(DDS_BUILD_LIB)
 
 project(DDS_engine)
 
-add_library(DDS_engine SHARED src/dds_engine/Application.cpp)
+add_library(DDS_engine SHARED
+        src/dds_engine/Application.cpp
+        src/dds_engine/Log.cpp
+        src/dds_engine/Core.cpp)
 
 target_include_directories(DDS_engine PUBLIC src)
 
