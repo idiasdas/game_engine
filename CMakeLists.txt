@@ -1,9 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_COMPILER "usr/bin/g++-4.2")
-
-add_compile_definitions(DDS_BUILD_LIB)
 
 project(DDS_engine)
 
@@ -18,6 +15,9 @@ target_include_directories(DDS_engine PUBLIC src
 add_subdirectory(vendor/spdlog)
 
 target_include_directories(DDS_engine PUBLIC vendor/spdlog/include)
+
+target_compile_definitions(DDS_engine PUBLIC DDS_PLATFORM_LINUX
+                        DDS_BUILD_LIB)
 
 add_executable(DDS_engine_test tests/TestMain.cpp)
 
