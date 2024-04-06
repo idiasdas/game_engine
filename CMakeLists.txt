@@ -16,8 +16,8 @@ add_subdirectory(vendor/spdlog)
 
 target_include_directories(DDS_engine PUBLIC vendor/spdlog/include)
 
-target_compile_definitions(DDS_engine PUBLIC DDS_PLATFORM_LINUX
-                        DDS_BUILD_LIB)
+target_compile_definitions(DDS_engine PUBLIC DDS_PLATFORM_LINUX)
+target_compile_definitions(DDS_engine PRIVATE DDS_BUILD_LIB)
 
 add_executable(DDS_engine_test tests/TestMain.cpp)
 
