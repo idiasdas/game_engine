@@ -1,9 +1,7 @@
 #pragma once
 
+#include "dds_enginepch.h"
 #include "dds_engine/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace dds {
     /*

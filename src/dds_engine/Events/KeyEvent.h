@@ -1,8 +1,7 @@
 #pragma once
 
+#include "dds_enginepch.h"
 #include "Event.h"
-
-#include <sstream>
 
 namespace dds {
     class DDS_API KeyEvent : public Event
