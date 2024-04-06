@@ -7,13 +7,17 @@ project(DDS_engine)
 add_library(DDS_engine SHARED
         src/dds_engine/Application.cpp
         src/dds_engine/Log.cpp
-        src/dds_engine/Core.cpp)
+        src/dds_engine/Core.cpp
+        src/Platform/Linux/LinuxWindow.cpp)
 
 target_include_directories(DDS_engine PUBLIC src
         src/dds_engine/Events)
 
 add_subdirectory(vendor/spdlog)
 add_subdirectory(vendor/glfw)
+
+# Using glfw as a static library
+target_link_libraries(DDS_engine glfw)
 
 target_include_directories(DDS_engine PUBLIC vendor/spdlog/include)
 target_include_directories(DDS_engine PUBLIC vendor/glfw/include)
