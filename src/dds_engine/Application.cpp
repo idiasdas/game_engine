@@ -1,6 +1,7 @@
+#include "dds_enginepch.h"
 #include "Application.h"
 #include "dds_engine/Events/ApplicationEvent.h"
-#include "dds_engine/Log.h"
+
 
 namespace dds{
 
