@@ -43,3 +43,8 @@ We are using `spdlog` to do so. As in Hazel, `dds_engine` provides the following
 ### Events ✅
 
 We can now create events as done in [episode 9](https://www.youtube.com/watch?v=xnopUoZbMEk&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=9&pp=iAQB).
+
+
+### Precompiled Headers ✅
+
+[Episode 10](https://www.youtube.com/watch?v=UQ718BrbQ5E&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=10) adds precompiled headers to Hazel using premake. The same was done to DDS Engine with Cmake.
