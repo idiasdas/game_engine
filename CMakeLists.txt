@@ -16,8 +16,9 @@ target_include_directories(DDS_engine PUBLIC src
 add_subdirectory(vendor/spdlog)
 add_subdirectory(vendor/glfw)
 
-# Using glfw as a static library
-target_link_libraries(DDS_engine glfw)
+find_package(OpenGL REQUIRED)
+
+target_link_libraries(DDS_engine ${OPENGL_LIBRARIES} glfw)
 
 target_include_directories(DDS_engine PUBLIC vendor/spdlog/include)
 target_include_directories(DDS_engine PUBLIC vendor/glfw/include)
