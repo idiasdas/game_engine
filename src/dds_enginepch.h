@@ -5,3 +5,5 @@
 #include <sstream>
 #include <functional>
 #include <memory>
+
+#include "dds_engine/Log.h"
