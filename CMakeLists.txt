@@ -22,6 +22,7 @@ target_precompile_headers(DDS_engine PRIVATE src/dds_enginepch.h)
 
 target_compile_definitions(DDS_engine PUBLIC DDS_PLATFORM_LINUX)
 target_compile_definitions(DDS_engine PRIVATE DDS_BUILD_LIB)
+target_compile_definitions(DDS_engine PRIVATE DDS_ENABLE_ASSERTS)
 
 
 add_executable(DDS_engine_test tests/TestMain.cpp)
