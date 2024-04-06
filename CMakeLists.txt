@@ -13,8 +13,11 @@ target_include_directories(DDS_engine PUBLIC src
         src/dds_engine/Events)
 
 add_subdirectory(vendor/spdlog)
+add_subdirectory(vendor/glfw)
 
 target_include_directories(DDS_engine PUBLIC vendor/spdlog/include)
+target_include_directories(DDS_engine PUBLIC vendor/glfw/include)
+
 target_precompile_headers(DDS_engine PRIVATE src/dds_enginepch.h)
 
 target_compile_definitions(DDS_engine PUBLIC DDS_PLATFORM_LINUX)

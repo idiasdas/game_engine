@@ -7,6 +7,12 @@ In this series, The Cherno builds [Hazel](https://github.com/TheCherno/Hazel) fr
 
 I'm following his videos with very few modifications so far. Here, Hazel is called `dds_engine` and I use the namespace `dds`. I'm focusing on Linux support and I use `cmake` instead of premake.
 
+# External Requirements
+
+[GFLW requirements for Linux:](https://www.glfw.org/docs/latest/compile.html)
+```bash
+sudo apt install libwayland-dev libxkbcommon-dev xorg-dev
+```
 # Usage
 
 You can compile the main branch using:
@@ -48,3 +54,15 @@ We can now create events as done in [episode 9](https://www.youtube.com/watch?v=
 ### Precompiled Headers ✅
 
 [Episode 10](https://www.youtube.com/watch?v=UQ718BrbQ5E&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=10) adds precompiled headers to Hazel using premake. The same was done to DDS Engine with Cmake.
+
+### GLFW ✅
+
+The Cherno forked [GLFW](https://github.com/glfw/glfw) to add a premake file. However, I'm using Cmake so I can add it directly.
+
+Added [GLFW](https://github.com/glfw/glfw) as a submodule and successfully compiled it following [this](https://www.glfw.org/docs/latest/compile.html).
+
+On Linux, you need to install the following packages:
+
+```bash
+sudo apt install libwayland-dev libxkbcommon-dev xorg-dev
+```
