@@ -55,14 +55,30 @@ We can now create events as done in [episode 9](https://www.youtube.com/watch?v=
 
 [Episode 10](https://www.youtube.com/watch?v=UQ718BrbQ5E&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=10) adds precompiled headers to Hazel using premake. The same was done to DDS Engine with Cmake.
 
-### GLFW ✅
+### Episode 11 (06/04/2024)
+
+Now, running `DDS_engine_test` creates an empty window.
+
+#### GLFW ✅
 
 The Cherno forked [GLFW](https://github.com/glfw/glfw) to add a premake file. However, I'm using Cmake so I can add it directly.
 
-Added [GLFW](https://github.com/glfw/glfw) as a submodule and successfully compiled it following [this](https://www.glfw.org/docs/latest/compile.html).
+Added [GLFW](https://github.com/glfw/glfw) as a submodule and successfully compiled it following [this](https://www.glfw.org/docs/latest/compile.html). To link it correctly, I followed the steps described [here](https://www.glfw.org/docs/latest/build_guide.html#build_link_cmake_source).
 
 On Linux, you need to install the following packages:
 
 ```bash
 sudo apt install libwayland-dev libxkbcommon-dev xorg-dev
 ```
+
+#### Created Window and LinuxWindow
+
+Only supporting Linux for the moment.
+
+#### Added ASSERTS (Linux Only)✅
+
+```cpp
+#define DDS_ASSERT(x, ...)
+```
+
+Using `__asm__ __volatile__("int3");` for Linux instead of `__debugbreak();` for Windows.
