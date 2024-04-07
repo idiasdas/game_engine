@@ -86,3 +86,11 @@ Using `__asm__ __volatile__("int3");` for Linux instead of `__debugbreak();` for
 ### Episode 12 (07/04/2024) ✅
 
 Added window event callbacks. And now dispatching WindowCloseEvent so we can end the application.
+
+### Episode 13 (07/04/2024) ✅
+
+Created Layer and LayerStack.
+
+Fixed issue on Event (missing methods).
+
+Reorganized unnecessary precompiled headers.
