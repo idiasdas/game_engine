@@ -8,7 +8,10 @@ add_library(DDS_engine SHARED
         src/dds_engine/Application.cpp
         src/dds_engine/Log.cpp
         src/dds_engine/Core.cpp
-        src/Platform/Linux/LinuxWindow.cpp)
+        src/Platform/Linux/LinuxWindow.cpp
+        src/dds_engine/Layer.cpp
+        src/dds_engine/LayerStack.cpp
+        )
 
 target_include_directories(DDS_engine PUBLIC src
         src/dds_engine/Events)
