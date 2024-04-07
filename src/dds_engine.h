@@ -1,8 +1,9 @@
 #pragma once
 
-#include "dds_enginepch.h"
-#include "dds_engine/Application.h"
 
+#include "dds_engine/Application.h"
+#include "dds_engine/Layer.h"
+#include "dds_engine/Log.h"
 
 // --------------------------------------
 // Entry point for the client application
