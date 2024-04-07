@@ -82,3 +82,7 @@ Only supporting Linux for the moment.
 ```
 
 Using `__asm__ __volatile__("int3");` for Linux instead of `__debugbreak();` for Windows.
+
+### Episode 12 (07/04/2024) ✅
+
+Added window event callbacks. And now dispatching WindowCloseEvent so we can end the application.
