@@ -5,7 +5,7 @@ This repository follows The Cherno [tutorial](https://www.youtube.com/watch?v=Jx
 
 In this series, The Cherno builds [Hazel](https://github.com/TheCherno/Hazel) from scratch.
 
-I'm following his videos with very few modifications so far. Here, Hazel is called `dds_engine` and I use the namespace `dds`. I'm focusing on Linux support and I use `cmake` instead of premake.
+I'm following his videos with very few modifications so far. Here, Hazel is called `dds_engine` and I use the namespace `dds`. I'm focusing on Linux support and I use `CMake` instead of premake.
 
 # External Requirements
 
@@ -53,7 +53,7 @@ We can now create events as done in [episode 9](https://www.youtube.com/watch?v=
 
 ### Precompiled Headers ✅
 
-[Episode 10](https://www.youtube.com/watch?v=UQ718BrbQ5E&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=10) adds precompiled headers to Hazel using premake. The same was done to DDS Engine with Cmake.
+[Episode 10](https://www.youtube.com/watch?v=UQ718BrbQ5E&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=10) adds precompiled headers to Hazel using premake. The same was done to DDS Engine with CMake.
 
 ### Episode 11 (06/04/2024)
 
@@ -61,7 +61,7 @@ Now, running `DDS_engine_test` creates an empty window.
 
 #### GLFW ✅
 
-The Cherno forked [GLFW](https://github.com/glfw/glfw) to add a premake file. However, I'm using Cmake so I can add it directly.
+The Cherno forked [GLFW](https://github.com/glfw/glfw) to add a premake file. However, I'm using CMake so I can add it directly.
 
 Added [GLFW](https://github.com/glfw/glfw) as a submodule and successfully compiled it following [this](https://www.glfw.org/docs/latest/compile.html). To link it correctly, I followed the steps described [here](https://www.glfw.org/docs/latest/build_guide.html#build_link_cmake_source).
 
@@ -83,14 +83,18 @@ Only supporting Linux for the moment.
 
 Using `__asm__ __volatile__("int3");` for Linux instead of `__debugbreak();` for Windows.
 
-### Episode 12 (07/04/2024) ✅
+### Episode 12 ✅
 
 Added window event callbacks. And now dispatching WindowCloseEvent so we can end the application.
 
-### Episode 13 (07/04/2024) ✅
+### Episode 13 ✅
 
 Created Layer and LayerStack.
 
 Fixed issue on Event (missing methods).
 
 Reorganized unnecessary precompiled headers.
+
+### CMake Export
+
+I'm now using the `generate_export_header` method from CMake instead of doing it manually at `Core.h`.
