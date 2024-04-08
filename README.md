@@ -55,7 +55,7 @@ We can now create events as done in [episode 9](https://www.youtube.com/watch?v=
 
 [Episode 10](https://www.youtube.com/watch?v=UQ718BrbQ5E&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=10) adds precompiled headers to Hazel using premake. The same was done to DDS Engine with CMake.
 
-### Episode 11 (06/04/2024)
+### Episode 11
 
 Now, running `DDS_engine_test` creates an empty window.
 
