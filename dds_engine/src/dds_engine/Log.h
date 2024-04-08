@@ -8,7 +8,7 @@
 
 
 namespace dds {
-    class DDS_API Log
+    class DDS_ENGINE_EXPORT Log
     {
     public:
         static void Init();

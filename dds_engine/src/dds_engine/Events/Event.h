@@ -34,7 +34,7 @@ namespace dds {
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
 
-    class DDS_API Event
+    class DDS_ENGINE_EXPORT Event
     {
         friend class EventDispatcher;
 
@@ -57,7 +57,7 @@ namespace dds {
         bool m_Handled = false;
     };
 
-    class DDS_API EventDispatcher
+    class DDS_ENGINE_EXPORT EventDispatcher
     {
         template<typename T>
         using EventFn = std::function<bool(T&)>;

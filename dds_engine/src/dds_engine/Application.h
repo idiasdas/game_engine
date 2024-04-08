@@ -10,7 +10,7 @@
 
 namespace dds{
 
-    class DDS_API Application
+    class DDS_ENGINE_EXPORT Application
     {
     public:
         Application();

@@ -4,7 +4,7 @@
 #include "Event.h"
 
 namespace dds {
-    class DDS_API KeyEvent : public Event
+    class DDS_ENGINE_EXPORT KeyEvent : public Event
     {
     public:
         inline int GetKeyCode() const { return m_KeyCode; }
@@ -17,7 +17,7 @@ namespace dds {
         int m_KeyCode;
     };
 
-    class DDS_API KeyPressedEvent : public KeyEvent
+    class DDS_ENGINE_EXPORT KeyPressedEvent : public KeyEvent
     {
     public:
         KeyPressedEvent(int keycode, int repeatCount)

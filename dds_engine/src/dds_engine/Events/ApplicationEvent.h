@@ -5,7 +5,7 @@
 
 namespace dds {
 
-    class DDS_API WindowResizeEvent : public Event
+    class DDS_ENGINE_EXPORT WindowResizeEvent : public Event
     {
     public:
         WindowResizeEvent(unsigned int width, unsigned int height)
@@ -27,7 +27,7 @@ namespace dds {
         unsigned int m_Width, m_Height;
     };
 
-    class DDS_API WindowCloseEvent : public Event
+    class DDS_ENGINE_EXPORT WindowCloseEvent : public Event
     {
     public:
         WindowCloseEvent() {}
@@ -36,7 +36,7 @@ namespace dds {
         EVENT_CLASS_CATEGORY(EventCategoryApplication)
     };
 
-    class DDS_API AppTickEvent : public Event
+    class DDS_ENGINE_EXPORT AppTickEvent : public Event
     {
     public:
         AppTickEvent() {}
@@ -45,7 +45,7 @@ namespace dds {
         EVENT_CLASS_CATEGORY(EventCategoryApplication)
     };
 
-    class DDS_API AppUpdateEvent : public Event
+    class DDS_ENGINE_EXPORT AppUpdateEvent : public Event
     {
     public:
         AppUpdateEvent() {}
@@ -54,7 +54,7 @@ namespace dds {
         EVENT_CLASS_CATEGORY(EventCategoryApplication)
     };
 
-    class DDS_API AppRenderEvent : public Event
+    class DDS_ENGINE_EXPORT AppRenderEvent : public Event
     {
     public:
         AppRenderEvent() {}

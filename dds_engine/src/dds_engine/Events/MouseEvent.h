@@ -5,7 +5,7 @@
 
 namespace dds {
 
-    class DDS_API MouseMovedEvent : public Event
+    class DDS_ENGINE_EXPORT MouseMovedEvent : public Event
     {
     public:
         MouseMovedEvent(float x, float y)
@@ -28,7 +28,7 @@ namespace dds {
     };
 
 
-    class DDS_API MouseScrolledEvent : public Event
+    class DDS_ENGINE_EXPORT MouseScrolledEvent : public Event
     {
     public:
         MouseScrolledEvent(float xOffset, float yOffset)
@@ -51,7 +51,7 @@ namespace dds {
     };
 
 
-    class DDS_API MouseButtomEvent : public Event
+    class DDS_ENGINE_EXPORT MouseButtomEvent : public Event
     {
     public:
         inline int GetMouseButton() const { return m_Button; }
@@ -65,7 +65,7 @@ namespace dds {
     };
 
 
-    class DDS_API MouseButtonPressedEvent : public MouseButtomEvent
+    class DDS_ENGINE_EXPORT MouseButtonPressedEvent : public MouseButtomEvent
     {
     public:
         MouseButtonPressedEvent(int button)
@@ -82,7 +82,7 @@ namespace dds {
     };
 
 
-    class DDS_API MouseButtonReleasedEvent : public MouseButtomEvent
+    class DDS_ENGINE_EXPORT MouseButtonReleasedEvent : public MouseButtomEvent
     {
     public:
         MouseButtonReleasedEvent(int button)

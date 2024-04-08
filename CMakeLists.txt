@@ -4,11 +4,20 @@ set(CMAKE_CXX_STANDARD 17)
 
 project(game_engine)
 
+# Visibility
+set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+set(CMAKE_VISIBILITY_INLINES_HIDDEN YES)
+
+include(GenerateExportHeader)
+
 # ---------------------------------------------------
 # Engine shared library
 file(GLOB_RECURSE MY_SOURCES "dds_engine/src/*.cpp")
 add_library(DDS_engine SHARED ${MY_SOURCES})
 target_include_directories(DDS_engine PUBLIC dds_engine/src)
+
+generate_export_header(DDS_engine EXPORT_FILE_NAME include/dds_export.h)
+target_include_directories(DDS_engine PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/include)
 # ---------------------------------------------------
 # External libraries
 add_subdirectory(dds_engine/vendor/spdlog)
@@ -24,8 +33,6 @@ target_include_directories(DDS_engine PUBLIC dds_engine/vendor/glfw/include)
 target_precompile_headers(DDS_engine PRIVATE dds_engine/src/dds_enginepch.h)
 # ---------------------------------------------------
 # Preprocessor definitions
-target_compile_definitions(DDS_engine PUBLIC DDS_PLATFORM_LINUX)
-target_compile_definitions(DDS_engine PRIVATE DDS_BUILD_LIB)
 target_compile_definitions(DDS_engine PRIVATE DDS_ENABLE_ASSERTS)
 # ---------------------------------------------------
 # This test acts as sandbox for the moment

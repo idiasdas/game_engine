@@ -6,7 +6,7 @@
 #include <vector>
 namespace dds {
 
-    class DDS_API LayerStack
+    class DDS_ENGINE_EXPORT LayerStack
     {
     public:
         LayerStack();

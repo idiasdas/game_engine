@@ -6,7 +6,7 @@
 
 namespace dds {
 
-    class DDS_API LinuxWindow : public Window
+    class DDS_ENGINE_EXPORT LinuxWindow : public Window
     {
     public:
         LinuxWindow(const WindowProps& props);

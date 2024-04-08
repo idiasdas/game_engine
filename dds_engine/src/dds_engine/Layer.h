@@ -4,7 +4,7 @@
 #include "Events/Event.h"
 
 namespace dds {
-    class DDS_API Layer
+    class DDS_ENGINE_EXPORT Layer
     {
     public:
         Layer(const std::string& name = "Layer");

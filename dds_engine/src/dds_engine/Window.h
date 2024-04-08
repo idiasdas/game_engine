@@ -17,7 +17,7 @@ namespace dds {
             : Title(title), Width(width), Height(height) {}
     };
 
-    class DDS_API Window
+    class DDS_ENGINE_EXPORT Window
     {
     public:
         using EventCallBackFn = std::function<void(Event&)>;
