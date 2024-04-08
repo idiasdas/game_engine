@@ -4,8 +4,8 @@
 
 #include "Window.h"
 #include "LayerStack.h"
-#include "Event.h"
-#include "ApplicationEvent.h"
+#include "Events/Event.h"
+#include "Events/ApplicationEvent.h"
 
 
 namespace dds{

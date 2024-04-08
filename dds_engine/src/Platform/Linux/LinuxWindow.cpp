@@ -1,8 +1,8 @@
 #include "dds_enginepch.h"
 #include "LinuxWindow.h"
-#include "ApplicationEvent.h"
-#include "MouseEvent.h"
-#include "KeyEvent.h"
+#include "dds_engine/Events/ApplicationEvent.h"
+#include "dds_engine/Events/MouseEvent.h"
+#include "dds_engine/Events/KeyEvent.h"
 
 namespace dds {
 
