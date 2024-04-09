@@ -20,11 +20,17 @@ generate_export_header(DDS_engine EXPORT_FILE_NAME include/dds_export.h)
 target_include_directories(DDS_engine PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/include)
 # ---------------------------------------------------
 # External libraries
+set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
+
 add_subdirectory(dds_engine/vendor/spdlog)
 add_subdirectory(dds_engine/vendor/glfw)
+add_subdirectory(dds_engine/vendor/glad)
 
 find_package(OpenGL REQUIRED)
-target_link_libraries(DDS_engine ${OPENGL_LIBRARIES} glfw)
+
+target_compile_options(spdlog PRIVATE -fPIC) # Required for shared libraries
+
+target_link_libraries(DDS_engine ${OPENGL_LIBRARIES} glfw spdlog glad)
 
 target_include_directories(DDS_engine PUBLIC dds_engine/vendor/spdlog/include)
 target_include_directories(DDS_engine PUBLIC dds_engine/vendor/glfw/include)
