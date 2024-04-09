@@ -1,8 +1,8 @@
 #pragma once
 
-
 #include "dds_engine/Window.h"
-#include <GLFW/glfw3.h>
+
+struct GLFWwindow;
 
 namespace dds {
 

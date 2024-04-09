@@ -29,6 +29,9 @@ add_subdirectory(dds_engine/vendor/glad)
 find_package(OpenGL REQUIRED)
 
 target_compile_options(spdlog PRIVATE -fPIC) # Required for shared libraries
+target_compile_options(glad PRIVATE -fPIC) # Required for shared libraries
+
+target_compile_definitions(DDS_engine PUBLIC GLFW_INCLUDE_NONE) # Don't include OpenGL headers
 
 target_link_libraries(DDS_engine ${OPENGL_LIBRARIES} glfw spdlog glad)
 
