@@ -95,6 +95,10 @@ Fixed issue on Event (missing methods).
 
 Reorganized unnecessary precompiled headers.
 
-### CMake Export
+### CMake Export ✅
 
 I'm now using the `generate_export_header` method from CMake instead of doing it manually at `Core.h`.
+
+### GLAD ✅
+
+Integrated glad into DDS_engine.
