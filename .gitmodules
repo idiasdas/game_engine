@@ -4,3 +4,6 @@
 [submodule "vendor/glfw"]
 	path = dds_engine/vendor/glfw
 	url = https://github.com/glfw/glfw.git
+[submodule "dds_engine/vendor/imgui"]
+	path = dds_engine/vendor/imgui
+	url = https://github.com/idiasdas/imgui.git
