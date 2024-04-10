@@ -26,6 +26,7 @@ public:
     TestApp()
     {
         PushLayer(new ExampleLayer());
+        PushOverlay(new dds::ImGuiLayer());
     }
     ~TestApp()
     {
