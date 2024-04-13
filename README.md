@@ -1,19 +1,28 @@
 <!-- ✅❌ -->
 # game_engine
 
-This repository follows The Cherno [tutorial](https://www.youtube.com/watch?v=JxIZbV_XjAs&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT) on game engines.
+This repository follows [The Cherno tutorial](https://www.youtube.com/watch?v=JxIZbV_XjAs&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT) on game engines where he builds [Hazel](https://github.com/TheCherno/Hazel) from scratch.
 
-In this series, The Cherno builds [Hazel](https://github.com/TheCherno/Hazel) from scratch.
+I'm following his videos with very few modifications so far. Here, [Hazel](https://github.com/TheCherno/Hazel) is called `DDS engine` and uses the namespace `dds`. I'm focusing on Linux support and using `CMake` instead of premake.
 
-I'm following his videos with very few modifications so far. Here, Hazel is called `dds_engine` and I use the namespace `dds`. I'm focusing on Linux support and I use `CMake` instead of premake.
+[Hazel](https://github.com/TheCherno/Hazel) is an open-source project using an [Apache](https://github.com/TheCherno/Hazel/blob/master/LICENSE)[ License](https://github.com/TheCherno/Hazel/blob/master/LICENSE). `DDS engine` uses the same [license](./LICENSE).
 
-# External Requirements
+# Quick Start
 
-[GFLW requirements for Linux:](https://www.glfw.org/docs/latest/compile.html)
+Clone this repo:
+
+```bash
+git clone https://github.com/idiasdas/game_engine.git
+```
+
+### Requirements
+
+GFLW [requirements](https://www.glfw.org/docs/latest/compile.html) for Linux:
+
 ```bash
 sudo apt install libwayland-dev libxkbcommon-dev xorg-dev
 ```
-# Usage
+### Usage
 
 You can compile the main branch using:
 
@@ -22,83 +31,40 @@ cd scripts
 ./debug.sh
 ```
 
-This script creates the executable `build/debug/DDS_engine_test`.
+This script creates the executable `build/debug/DDS_engine_test`. Running it should open a DDS engine window with the ImGui console.
 
-## Features
+# Project Status
 
-### Logging ✅
+- **Episode 1:** ✅
+- **Episode 2:** ✅
+- **Episode 3:** ✅
+- **Episode 4:** ✅
+- **Episode 5:** Entry point ✅
+- **Episode 6:** Logging ✅
+- **Episode 7:** Premake ✅
+    - Using CMake instead
+- **Episode 8:** ✅
+- **Episode 9:** Event System ✅
+- **Episode 10:** Precompiled Headers ✅
+    - Using CMake to achieve the same
+- **Episode 11:** Window Abstraction and GLFW ✅
+    - Added [GLFW](https://github.com/glfw/glfw) using CMake instead of Premake.
+    - Supporting Linux instead of Windows.
+    - On Linux, you need the following dependencies:
+        ```bash
+        sudo apt install libwayland-dev libxkbcommon-dev xorg-dev
+        ```
+- **Episode 12:** Window Events ✅
+- **Episode 13:** Layers ✅
+    - Created Layer and LayerStack.
+    - Fixed issue on Event (missing methods).
+    - Reorganized unnecessary precompiled headers.
+- **Episode 14:** Modern OpenGL ✅
+    - Added [GLAD](https://glad.dav1d.de/) with CMake.
+- **CMake Export:** ✅
+    - I'm now using the `generate_export_header` method from CMake instead of doing it manually at `Core.h` as The Cherno did.
+- **Episode 15:** ImGui ✅
+    - Using the most recent release of ImGui. Many files are different from the tutorial but so far everything is working properly.
+- **Episode 16:** In progress
 
-We are using `spdlog` to do so. As in Hazel, `dds_engine` provides the following macros:
-
-```cpp
-// Core log macros
-#define DDS_CORE_TRACE(...)    ::dds::Log::GetCoreLogger()->trace(__VA_ARGS__)
-#define DDS_CORE_INFO(...)     ::dds::Log::GetCoreLogger()->info(__VA_ARGS__)
-#define DDS_CORE_WARN(...)     ::dds::Log::GetCoreLogger()->warn(__VA_ARGS__)
-#define DDS_CORE_ERROR(...)    ::dds::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define DDS_CORE_FATAL(...)    ::dds::Log::GetCoreLogger()->fatal(__VA_ARGS__)
-
-// Client log macros
-#define DDS_TRACE(...)         ::dds::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define DDS_INFO(...)          ::dds::Log::GetClientLogger()->info(__VA_ARGS__)
-#define DDS_WARN(...)          ::dds::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define DDS_ERROR(...)         ::dds::Log::GetClientLogger()->error(__VA_ARGS__)
-#define DDS_FATAL(...)         ::dds::Log::GetClientLogger()->fatal(__VA_ARGS__)
-```
-
-### Events ✅
-
-We can now create events as done in [episode 9](https://www.youtube.com/watch?v=xnopUoZbMEk&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=9&pp=iAQB).
-
-
-### Precompiled Headers ✅
-
-[Episode 10](https://www.youtube.com/watch?v=UQ718BrbQ5E&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=10) adds precompiled headers to Hazel using premake. The same was done to DDS Engine with CMake.
-
-### Episode 11
-
-Now, running `DDS_engine_test` creates an empty window.
-
-#### GLFW ✅
-
-The Cherno forked [GLFW](https://github.com/glfw/glfw) to add a premake file. However, I'm using CMake so I can add it directly.
-
-Added [GLFW](https://github.com/glfw/glfw) as a submodule and successfully compiled it following [this](https://www.glfw.org/docs/latest/compile.html). To link it correctly, I followed the steps described [here](https://www.glfw.org/docs/latest/build_guide.html#build_link_cmake_source).
-
-On Linux, you need to install the following packages:
-
-```bash
-sudo apt install libwayland-dev libxkbcommon-dev xorg-dev
-```
-
-#### Created Window and LinuxWindow
-
-Only supporting Linux for the moment.
-
-#### Added ASSERTS (Linux Only)✅
-
-```cpp
-#define DDS_ASSERT(x, ...)
-```
-
-Using `__asm__ __volatile__("int3");` for Linux instead of `__debugbreak();` for Windows.
-
-### Episode 12 ✅
-
-Added window event callbacks. And now dispatching WindowCloseEvent so we can end the application.
-
-### Episode 13 ✅
-
-Created Layer and LayerStack.
-
-Fixed issue on Event (missing methods).
-
-Reorganized unnecessary precompiled headers.
-
-### CMake Export ✅
-
-I'm now using the `generate_export_header` method from CMake instead of doing it manually at `Core.h`.
-
-### GLAD ✅
-
-Integrated glad into DDS_engine.
+---
