@@ -16,6 +16,7 @@ file(GLOB_RECURSE MY_SOURCES "dds_engine/src/*.cpp")
 add_library(DDS_engine SHARED ${MY_SOURCES})
 target_include_directories(DDS_engine PUBLIC dds_engine/src)
 
+# Export header
 generate_export_header(DDS_engine EXPORT_FILE_NAME include/dds_export.h)
 target_include_directories(DDS_engine PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/include)
 # ---------------------------------------------------
