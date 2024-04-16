@@ -61,6 +61,9 @@ This script creates the executable `build/debug/DDS_engine_test`. Running it sho
     - I'm now using the `generate_export_header` method from CMake instead of doing it manually at `Core.h` as The Cherno did.
 - **Episode 15:** ImGui ✅
     - Using the most recent release of ImGui. Many files are different from the tutorial but so far everything is working properly.
-- **Episode 16:** In progress
+- **Episode 16:** ImGui Events ✅
+    - Added KeyMap between ImGui and GLFW.
+    - Created KeyTyped Event.
+    - Now you can type on the console.
 
 ---
