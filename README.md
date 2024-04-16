@@ -24,14 +24,15 @@ sudo apt install libwayland-dev libxkbcommon-dev xorg-dev
 ```
 ### Usage
 
-You can compile the main branch using:
+In `game_engine/`, first configure CMake with:
 
 ```bash
-cd scripts
-./debug.sh
+$ cmake -DCMAKE_BUILD_TYPE=Debug -S . -B build/Debug
 ```
 
-This script creates the executable `build/debug/DDS_engine_test`. Running it should open a DDS engine window with the ImGui console.
+You should now have the directory `game_engine/build/Debug/` with all the necessary CMake files. In this directory, you can use `make` to build the engine executable.
+
+__Note__: The `CMakeLists.txt` automatically detects all the source files within the project. **However**, you need to redo the configuration step above whenever you add new files instead of simply running make to build the executable.
 
 # Project Status
 
