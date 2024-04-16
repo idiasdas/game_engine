@@ -65,5 +65,5 @@ This script creates the executable `build/debug/DDS_engine_test`. Running it sho
     - Added KeyMap between ImGui and GLFW.
     - Created KeyTyped Event.
     - Now you can type on the console.
-
+- **Git structure:** Now using a dev branch. For each episode, I will create a new branch. The main branch will only receive documentation commits.
 ---
