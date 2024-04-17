@@ -1,5 +1,3 @@
-#pragma once
-
 #include "Log.h"
 
 namespace dds {
