@@ -7,6 +7,14 @@ I'm following his videos with very few modifications so far. Here, [Hazel](https
 
 [Hazel](https://github.com/TheCherno/Hazel) is an open-source project using an [Apache](https://github.com/TheCherno/Hazel/blob/master/LICENSE)[ License](https://github.com/TheCherno/Hazel/blob/master/LICENSE). `DDS engine` uses the same [license](./LICENSE).
 
+# Requirements
+
+GFLW [requirements](https://www.glfw.org/docs/latest/compile.html) for Linux:
+
+```bash
+sudo apt install libwayland-dev libxkbcommon-dev xorg-dev
+```
+
 # Quick Start
 
 Clone this repo:
@@ -15,24 +23,22 @@ Clone this repo:
 git clone https://github.com/idiasdas/game_engine.git
 ```
 
-### Requirements
-
-GFLW [requirements](https://www.glfw.org/docs/latest/compile.html) for Linux:
+Initialize the submodules:
 
 ```bash
-sudo apt install libwayland-dev libxkbcommon-dev xorg-dev
+$ git submodule update --init
 ```
-### Usage
 
-In `game_engine/`, first configure CMake with:
+Configure CMake with:
 
 ```bash
 $ cmake -DCMAKE_BUILD_TYPE=Debug -S . -B build/Debug
 ```
 
-You should now have the directory `game_engine/build/Debug/` with all the necessary CMake files. In this directory, you can use `make` to build the engine executable.
+You should now, hopefully, have the directory `game_engine/build/Debug/` with all the necessary CMake files. In this directory, you can use `make` to build the engine executable.
 
-__Note__: The `CMakeLists.txt` automatically detects all the source files within the project. **However**, you need to redo the configuration step above whenever you add new files instead of simply running make to build the executable.
+> [!NOTE]
+> The `CMakeLists.txt` automatically detects all the source files within the project. ***However***, you must redo the configuration step above whenever you add new files instead of simply running `make` to build the executable.
 
 # Project Status
 
