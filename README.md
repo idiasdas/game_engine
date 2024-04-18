@@ -42,35 +42,37 @@ You should now, hopefully, have the directory `game_engine/build/Debug/` with al
 
 # Project Status
 
-- **Episode 1:** ✅
-- **Episode 2:** ✅
-- **Episode 3:** ✅
-- **Episode 4:** ✅
-- **Episode 5:** Entry point ✅
-- **Episode 6:** Logging ✅
-- **Episode 7:** Premake ✅
+- [x] **Episode 1:**
+- [x] **Episode 2:**
+- [x] **Episode 3:**
+- [x] **Episode 4:**
+- [x] **Episode 5:** Entry point
+- [x] **Episode 6:** Logging
+- [x] **Episode 7:** Premake
     - Using CMake instead
-- **Episode 8:** ✅
-- **Episode 9:** Event System ✅
-- **Episode 10:** Precompiled Headers ✅
+- [x] **Episode 8:**
+- [x] **Episode 9:** Event System
+- [x] **Episode 10:** Precompiled Headers
     - Using CMake to achieve the same
-- **Episode 11:** Window Abstraction and GLFW ✅
+- [x] **Episode 11:** Window Abstraction and GLFW
     - Added [GLFW](https://github.com/glfw/glfw) using CMake instead of Premake.
     - Supporting Linux instead of Windows.
-- **Episode 12:** Window Events ✅
-- **Episode 13:** Layers ✅
+- [x] **Episode 12:** Window Events
+- [x] **Episode 13:** Layers
     - Created Layer and LayerStack.
     - Fixed issue on Event (missing methods).
     - Reorganized unnecessary precompiled headers.
-- **Episode 14:** Modern OpenGL ✅
+- [x] **Episode 14:** Modern OpenGL
     - Added [GLAD](https://glad.dav1d.de/) with CMake.
-- **CMake Export:** ✅
+- [x] **CMake Export:**
     - I'm now using the `generate_export_header` method from CMake instead of doing it manually at `Core.h` as The Cherno did.
-- **Episode 15:** ImGui ✅
+- [x] **Episode 15:** ImGui
     - Using the most recent release of ImGui. Many files are different from the tutorial but so far everything is working properly.
-- **Episode 16:** ImGui Events ✅
+- [x] **Episode 16:** ImGui Events
     - Added KeyMap between ImGui and GLFW.
     - Created KeyTyped Event.
     - Now you can type on the console.
-- **Episode 19:** Input Polling ✅
+- [x] **Episode 19:** Input Polling
+- [ ] **Episode 20:** Key and Mouse Codes
+
 ---
