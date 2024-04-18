@@ -11,6 +11,10 @@ public:
     void OnUpdate() override
     {
         DDS_INFO("ExampleLayer::Update");
+        if(dds::Input::IsKeyPressed(DDS_KEY_TAB))
+        {
+            DDS_INFO("Tab key is pressed");
+        }
     }
 
     void OnEvent(dds::Event& event) override
