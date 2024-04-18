@@ -55,5 +55,5 @@ target_precompile_headers(DDS_engine PRIVATE dds_engine/src/dds_enginepch.h)
 target_compile_definitions(DDS_engine PRIVATE DDS_ENABLE_ASSERTS)
 # ---------------------------------------------------
 # This test acts as sandbox for the moment
-add_executable(DDS_engine_test tests/TestMain.cpp)
-target_link_libraries(DDS_engine_test DDS_engine)
+add_executable(DDS_SandboxApp sandbox/SandboxApp.cpp)
+target_link_libraries(DDS_SandboxApp DDS_engine)

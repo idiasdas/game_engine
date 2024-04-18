@@ -20,15 +20,15 @@ public:
 
 };
 
-class TestApp : public dds::Application
+class SandboxApp : public dds::Application
 {
 public:
-    TestApp()
+    SandboxApp()
     {
         PushLayer(new ExampleLayer());
         PushOverlay(new dds::ImGuiLayer());
     }
-    ~TestApp()
+    ~SandboxApp()
     {
 
     }
@@ -36,5 +36,5 @@ public:
 
 dds::Application* dds::CreateApplication()
 {
-    return new TestApp();
+    return new SandboxApp();
 }
