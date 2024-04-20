@@ -30,6 +30,7 @@ add_subdirectory(dds_engine/vendor/spdlog)
 add_subdirectory(dds_engine/vendor/glfw)
 add_subdirectory(dds_engine/vendor/glad)
 add_subdirectory(dds_engine/vendor/imgui)
+add_subdirectory(dds_engine/vendor/glm)
 
 # Find OpenGL
 find_package(OpenGL REQUIRED)
@@ -41,12 +42,20 @@ target_compile_options(imgui PRIVATE -fPIC) # Required for shared libraries
 target_compile_definitions(DDS_engine PUBLIC GLFW_INCLUDE_NONE) # Don't include OpenGL headers
 
 # Link libraries
-target_link_libraries(DDS_engine ${OPENGL_LIBRARIES} glfw spdlog glad imgui)
+target_link_libraries(DDS_engine PUBLIC
+                    ${OPENGL_LIBRARIES}
+                    glfw
+                    spdlog
+                    glad
+                    imgui
+                    glm::glm
+)
 
 # Include directories
 target_include_directories(DDS_engine PUBLIC dds_engine/vendor/spdlog/include)
 target_include_directories(DDS_engine PUBLIC dds_engine/vendor/glfw/include)
 target_include_directories(DDS_engine PUBLIC dds_engine/vendor/imgui)
+target_include_directories(DDS_engine PUBLIC dds_engine/vendor/glm)
 # ---------------------------------------------------
 #  Precompiled headers
 target_precompile_headers(DDS_engine PRIVATE dds_engine/src/dds_enginepch.h)
@@ -54,6 +63,6 @@ target_precompile_headers(DDS_engine PRIVATE dds_engine/src/dds_enginepch.h)
 # Preprocessor definitions
 target_compile_definitions(DDS_engine PRIVATE DDS_ENABLE_ASSERTS)
 # ---------------------------------------------------
-# This test acts as sandbox for the moment
+# Sandbox application
 add_executable(DDS_SandboxApp sandbox/SandboxApp.cpp)
 target_link_libraries(DDS_SandboxApp DDS_engine)
