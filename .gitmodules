@@ -7,3 +7,6 @@
 [submodule "dds_engine/vendor/imgui"]
 	path = dds_engine/vendor/imgui
 	url = https://github.com/idiasdas/imgui.git
+[submodule "dds_engine/vendor/glm"]
+	path = dds_engine/vendor/glm
+	url = https://github.com/g-truc/glm
