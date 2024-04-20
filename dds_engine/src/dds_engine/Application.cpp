@@ -17,8 +17,8 @@ namespace dds{
         m_Window = std::unique_ptr<Window>(Window::Create());
         m_Window->SetEventCallBack(BIND_EVENT_FN(&Application::OnEvent));
 
-        unsigned int id;
-        glGenVertexArrays(1, &id);
+        m_ImGuiLayer = new dds::ImGuiLayer();
+        PushOverlay(m_ImGuiLayer);
     }
 
     Application::~Application()
@@ -64,9 +64,12 @@ namespace dds{
             glClear(GL_COLOR_BUFFER_BIT);
 
             for (Layer* layer : m_LayerStack)
-            {
                 layer->OnUpdate();
-            }
+
+            m_ImGuiLayer->Begin();
+            for (Layer* layer : m_LayerStack)
+                layer->OnImGuiRender();
+            m_ImGuiLayer->End();
 
             auto[x, y] = Input::GetMousePosition();
             DDS_CORE_TRACE("{0}, {1}",x , y);

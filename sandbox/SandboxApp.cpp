@@ -30,8 +30,8 @@ public:
     SandboxApp()
     {
         PushLayer(new ExampleLayer());
-        PushOverlay(new dds::ImGuiLayer());
     }
+
     ~SandboxApp()
     {
 
