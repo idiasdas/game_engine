@@ -27,6 +27,26 @@ namespace dds {
         unsigned int m_Width, m_Height;
     };
 
+    class DDS_ENGINE_EXPORT WindowMovedEvent : public Event
+    {
+    public:
+        WindowMovedEvent(int x, int y)
+            : m_X(x), m_Y(y) {}
+        inline int GetX() const { return m_X; }
+        inline int GetY() const { return m_Y; }
+        std::string ToString() const override
+        {
+            std::stringstream ss;
+            ss << "WindowMovedEvent: " << m_X << ", " << m_Y;
+            return ss.str();
+        }
+        EVENT_CLASS_TYPE(WindowMoved)
+        EVENT_CLASS_CATEGORY(EventCategoryApplication)
+
+    private:
+        int m_X, m_Y;
+    };
+
     class DDS_ENGINE_EXPORT WindowCloseEvent : public Event
     {
     public:

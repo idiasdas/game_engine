@@ -145,6 +145,14 @@ namespace dds {
             MouseMovedEvent event((float)xPos, (float)yPos);
             data.EventCallback(event);
         });
+
+        glfwSetWindowPosCallback(m_Window, [](GLFWwindow* window, int xPos, int yPos)
+        {
+            WindowData& data = *(WindowData*) glfwGetWindowUserPointer(window);
+            glfwGetWindowPos(window, &xPos, &yPos);
+            WindowMovedEvent event(xPos, yPos);
+            data.EventCallback(event);
+        });
     }
 
     void LinuxWindow::Shutdown()
