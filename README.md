@@ -73,6 +73,7 @@ You should now, hopefully, have the directory `game_engine/build/Debug/` with al
     - Created KeyTyped Event.
     - Now you can type on the console.
 - [x] **Episode 19:** Input Polling
-- [ ] **Episode 20:** Key and Mouse Codes
+- [x] **Episode 20:** Key and Mouse Codes
+    - Using codes defined in `GLFW/glf3.h`.
 
 ---
