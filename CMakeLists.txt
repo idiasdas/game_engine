@@ -25,6 +25,10 @@ target_include_directories(DDS_engine PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/include
 # Build static libraries
 set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
 
+# Using X11 instead of Wayland to support ImGui docking
+set(GLFW_BUILD_X11 ON)
+set(GLFW_BUILD_WAYLAND OFF)
+
 # Add subdirectories
 add_subdirectory(dds_engine/vendor/spdlog)
 add_subdirectory(dds_engine/vendor/glfw)
