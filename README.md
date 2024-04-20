@@ -75,5 +75,8 @@ You should now, hopefully, have the directory `game_engine/build/Debug/` with al
 - [x] **Episode 19:** Input Polling
 - [x] **Episode 20:** Key and Mouse Codes
     - Using codes defined in `GLFW/glf3.h`.
+- [x] **Episode 21:** Maths
+    - Added glm submodule
+    - Included glm into the CMake project and `Application.cpp`
 
 ---
