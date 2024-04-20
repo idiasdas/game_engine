@@ -18,7 +18,7 @@ namespace dds {
         unsigned int GetHeight() const override { return m_Data.Height; }
 
         // Window attributes
-        void SetEventCallBack(const EventCallBackFn& callback) override { m_Data.EventCallback = callback; }
+        inline void SetEventCallBack(const EventCallBackFn& callback) override { m_Data.EventCallback = callback; }
         void SetVSync(bool enabled) override;
         bool IsVSync() const override;
 
