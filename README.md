@@ -3,13 +3,13 @@
 
 This repository follows [The Cherno tutorial](https://www.youtube.com/watch?v=JxIZbV_XjAs&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT) on game engines where he builds [Hazel](https://github.com/TheCherno/Hazel) from scratch.
 
-I'm following his videos with very few modifications so far. Here, [Hazel](https://github.com/TheCherno/Hazel) is called `DDS engine` and uses the namespace `dds`. I'm focusing on Linux support and using `CMake` instead of premake.
+I'm following his videos with very few modifications so far. Here, [Hazel](https://github.com/TheCherno/Hazel) is called `DDS engine` and uses the namespace `dds`. I'm focusing on `Linux support` instead of Windows and using `CMake` instead of premake.
 
 [Hazel](https://github.com/TheCherno/Hazel) is an open-source project using an [Apache](https://github.com/TheCherno/Hazel/blob/master/LICENSE)[ License](https://github.com/TheCherno/Hazel/blob/master/LICENSE). `DDS engine` uses the same [license](./LICENSE).
 
 # Requirements
 
-GFLW [requirements](https://www.glfw.org/docs/latest/compile.html) for Linux:
+[GFLW requirements](https://www.glfw.org/docs/latest/compile.html) for Linux:
 
 ```bash
 sudo apt install libwayland-dev libxkbcommon-dev xorg-dev
@@ -37,7 +37,7 @@ Configure CMake with:
 $ cmake -DCMAKE_BUILD_TYPE=Debug -S . -B build/Debug
 ```
 
-You should now, hopefully, have the directory `game_engine/build/Debug/` with all the necessary CMake files. In this directory, you can use `make` to build the engine executable.
+You should now, hopefully, have the directory `game_engine/build/Debug/` with all the necessary CMake files. In this directory, you can use `make` to build the project. Building the project creates both the library `libDDS_engine.a` and the executable `DDS_SandboxApp`. Run the executable to launch the engine's most recent version.
 
 > [!NOTE]
 > The `CMakeLists.txt` automatically detects all the source files within the project. ***However***, you must redo the configuration step above whenever you add new files instead of simply running `make` to build the executable.
@@ -84,6 +84,8 @@ You should now, hopefully, have the directory `game_engine/build/Debug/` with al
     - Now both `dds_engine` and `sandbox` contain CMakeLists.txt files. The root file simply adds the subdirectories. I believe it makes the project structure clearer.
 - [x] **Episode 26:** Static library
     - Now DDS Engine is a static library
+- [ ] **Episode 27:** Rendering Context
+- [ ] **Episode 28:** First Triangle
 
 
 # Third-Party Software
