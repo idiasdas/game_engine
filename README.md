@@ -84,7 +84,7 @@ You should now, hopefully, have the directory `game_engine/build/Debug/` with al
     - Now both `dds_engine` and `sandbox` contain CMakeLists.txt files. The root file simply adds the subdirectories. I believe it makes the project structure clearer.
 - [x] **Episode 26:** Static library
     - Now DDS Engine is a static library
-- [ ] **Episode 27:** Rendering Context
+- [x] **Episode 27:** Rendering Context
 - [ ] **Episode 28:** First Triangle
 
 
