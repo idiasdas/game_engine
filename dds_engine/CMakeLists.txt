@@ -6,8 +6,8 @@ set(CMAKE_VISIBILITY_INLINES_HIDDEN YES)
 # ---------------------------------------------------
 # Engine static library
 file(GLOB_RECURSE MY_SOURCES "src/*.cpp")
-add_library(DDS_engine SHARED ${MY_SOURCES})
-# add_library(DDS_engine STATIC ${MY_SOURCES})
+# add_library(DDS_engine SHARED ${MY_SOURCES})
+add_library(DDS_engine STATIC ${MY_SOURCES})
 target_include_directories(DDS_engine PUBLIC src)
 
 # ---------------------------------------------------
@@ -37,9 +37,9 @@ add_subdirectory(vendor/glm)
 find_package(OpenGL REQUIRED)
 
 # Compile options
-target_compile_options(spdlog PRIVATE -fPIC) # Required for shared libraries
-target_compile_options(glad PRIVATE -fPIC) # Required for shared libraries
-target_compile_options(imgui PRIVATE -fPIC) # Required for shared libraries
+# target_compile_options(spdlog PRIVATE -fPIC) # Required for shared libraries
+# target_compile_options(glad PRIVATE -fPIC) # Required for shared libraries
+# target_compile_options(imgui PRIVATE -fPIC) # Required for shared libraries
 target_compile_definitions(DDS_engine PUBLIC GLFW_INCLUDE_NONE) # Don't include OpenGL headers
 
 # Link libraries
