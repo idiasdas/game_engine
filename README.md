@@ -85,7 +85,8 @@ You should now, hopefully, have the directory `game_engine/build/Debug/` with al
 - [x] **Episode 26:** Static library
     - Now DDS Engine is a static library
 - [x] **Episode 27:** Rendering Context
-- [ ] **Episode 28:** First Triangle
+- [x] **Episode 28:** First Triangle
+    - TODO: Make dds_engine use GPU on Ubuntu
 
 
 # Third-Party Software
