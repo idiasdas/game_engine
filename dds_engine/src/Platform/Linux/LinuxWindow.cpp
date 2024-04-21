@@ -3,6 +3,7 @@
 #include "dds_engine/Events/ApplicationEvent.h"
 #include "dds_engine/Events/MouseEvent.h"
 #include "dds_engine/Events/KeyEvent.h"
+#include "Platform/OpenGL/OpenGLContext.h"
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -39,6 +40,7 @@ namespace dds {
 
         DDS_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 
+
         if (!s_GLFWInitialized)
         {
             //TODO: glfwTerminate on system shutdown
@@ -49,8 +51,12 @@ namespace dds {
         }
 
         m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
-        glfwMakeContextCurrent(m_Window);
 
+        m_Context = new OpenGLContext(m_Window);
+        m_Context->Init();
+
+        // TODO: Set GLFW context
+        glfwMakeContextCurrent(m_Window);
         int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
         DDS_CORE_ASSERT(status, "Failed to initialize Glad!");
 
@@ -163,7 +169,7 @@ namespace dds {
     void LinuxWindow::OnUpdate()
     {
         glfwPollEvents();
-        glfwSwapBuffers(m_Window);
+        m_Context->SwapBuffers();
     }
 
     void LinuxWindow::SetVSync(bool enabled)

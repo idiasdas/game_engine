@@ -1,8 +1,7 @@
 #pragma once
 
 #include "dds_engine/Window.h"
-
-struct GLFWwindow;
+#include "Platform/OpenGL/OpenGLContext.h"
 
 namespace dds {
 
@@ -28,6 +27,8 @@ namespace dds {
         virtual void Shutdown();
     private:
         GLFWwindow* m_Window;
+
+        GraphicsContext* m_Context;
 
         struct WindowData
         {
