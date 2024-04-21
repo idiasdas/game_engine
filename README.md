@@ -44,15 +44,12 @@ You should now, hopefully, have the directory `game_engine/build/Debug/` with al
 
 # Project Status
 
-- [x] **Episode 1:**
-- [x] **Episode 2:**
-- [x] **Episode 3:**
-- [x] **Episode 4:**
+- [x] **Episodes 1-4:** Design Discussion
 - [x] **Episode 5:** Entry point
 - [x] **Episode 6:** Logging
 - [x] **Episode 7:** Premake
     - Using CMake instead
-- [x] **Episode 8:**
+- [x] **Episode 8:** Planning the event system
 - [x] **Episode 9:** Event System
 - [x] **Episode 10:** Precompiled Headers
     - Using CMake to achieve the same
@@ -82,6 +79,7 @@ You should now, hopefully, have the directory `game_engine/build/Debug/` with al
     - Included glm into the CMake project and `Application.cpp`.
 - [x] **Episode 22:** ImGui Docking and Viewports
     - Wayland does not support `glfwSetWindowPosCallback` so Viewport does not work properly. Therefore, I have changed to X11 instead of Wayland.
+- [x] **Episodes 23-25:** Design Discussion
 
 
 # Third-Party Software
