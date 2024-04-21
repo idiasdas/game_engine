@@ -65,11 +65,5 @@ target_precompile_headers(DDS_engine PRIVATE src/dds_enginepch.h)
 target_compile_definitions(DDS_engine PRIVATE DDS_ENABLE_ASSERTS)
 # ---------------------------------------------------
 # Compile options
-target_compile_options(DDS_engine PRIVATE
-                        -Wall
-                        -Wextra
-                        # -Werror
-                        # -Wconversion
-                        # -Wsign-conversion
-)
+target_compile_options(DDS_engine PRIVATE -Wall)
 # ---------------------------------------------------
