@@ -80,6 +80,8 @@ You should now, hopefully, have the directory `game_engine/build/Debug/` with al
 - [x] **Episode 22:** ImGui Docking and Viewports
     - Wayland does not support `glfwSetWindowPosCallback` so Viewport does not work properly. Therefore, I have changed to X11 instead of Wayland.
 - [x] **Episodes 23-25:** Design Discussion
+- [x] **CMake:** Changed CMake project structure
+    - Now both `dds_engine` and `sandbox` contain CMakeLists.txt files. The root file simply adds the subdirectories. I believe it makes the project structure clearer.
 
 
 # Third-Party Software
