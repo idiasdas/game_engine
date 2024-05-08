@@ -42,6 +42,15 @@ You should now, hopefully, have the directory `game_engine/build/Debug/` with al
 > [!NOTE]
 > The `CMakeLists.txt` automatically detects all the source files within the project. ***However***, you must redo the configuration step above whenever you add new files instead of simply running `make` to build the executable.
 
+# Run tests
+
+Go to the build directory (usually `build/Debug`) and run:
+
+```bash
+$ ctest
+```
+Just remember to configure CMake and build the project as described in the previous section.
+
 # Project Status
 
 - [x] **Episodes 1-4:** Design Discussion
@@ -87,6 +96,7 @@ You should now, hopefully, have the directory `game_engine/build/Debug/` with al
 - [x] **Episode 27:** Rendering Context
 - [x] **Episode 28:** First Triangle
     - TODO: Make dds_engine use GPU on Ubuntu
+- [x] **GTest:** Included `GTest` to project. You can now write tests in `tests/`.
 
 
 # Third-Party Software
