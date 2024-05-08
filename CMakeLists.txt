@@ -9,3 +9,8 @@ add_subdirectory(dds_engine)
 
 # Sandbox executable DDS_SandboxApp
 add_subdirectory(sandbox)
+
+# Tests
+enable_testing()
+find_package(GTest REQUIRED)
+add_subdirectory(tests)
