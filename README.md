@@ -1,9 +1,9 @@
 <!-- ✅❌ -->
-# game_engine
+# DDS Game Engine
 
 This repository follows [The Cherno tutorial](https://www.youtube.com/watch?v=JxIZbV_XjAs&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT) on game engines where he builds [Hazel](https://github.com/TheCherno/Hazel) from scratch.
 
-I'm following his videos with very few modifications so far. Here, [Hazel](https://github.com/TheCherno/Hazel) is called `DDS engine` and uses the namespace `dds`. I'm focusing on `Linux support` instead of Windows and using `CMake` instead of premake.
+I'm following his videos with very few modifications so far. I'm focusing on **Linux support** instead of Windows and using **CMake** instead of premake.
 
 [Hazel](https://github.com/TheCherno/Hazel) is an open-source project using an [Apache](https://github.com/TheCherno/Hazel/blob/master/LICENSE)[ License](https://github.com/TheCherno/Hazel/blob/master/LICENSE). `DDS engine` uses the same [license](./LICENSE).
 
