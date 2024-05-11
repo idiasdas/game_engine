@@ -95,8 +95,9 @@ Just remember to configure CMake and build the project as described in the previ
     - Now DDS Engine is a static library
 - [x] **Episode 27:** Rendering Context
 - [x] **Episode 28:** First Triangle
-    - TODO: Make dds_engine use GPU on Ubuntu
+    - Done: dds_engine uses dedicated GPU.
 - [x] **GTest:** Included `GTest` to project. You can now write tests in `tests/`.
+- [x] **Episode 29:** Shaders
 
 
 # Third-Party Software
