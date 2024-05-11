@@ -1,6 +1,7 @@
+#include "dds_enginepch.h"
 #include "Shader.h"
-#include <glad/glad.h>
 
+#include <glad/glad.h>
 
 namespace dds{
 

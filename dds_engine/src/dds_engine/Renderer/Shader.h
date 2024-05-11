@@ -1,6 +1,7 @@
 #pragma once
 
-#include "dds_enginepch.h"
+#include <string>
+
 namespace dds{
 
     class Shader
