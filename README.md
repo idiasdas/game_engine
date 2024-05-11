@@ -98,6 +98,9 @@ Just remember to configure CMake and build the project as described in the previ
     - Done: dds_engine uses dedicated GPU.
 - [x] **GTest:** Included `GTest` to project. You can now write tests in `tests/`.
 - [x] **Episode 29:** Shaders
+- [x] **Episode 30:** Renderer API abstraction
+    - VertexBuffer and IndexBuffer classes abstract OpenGL implementation for buffers.
+    - TODO: Abtract shaders.
 
 
 # Third-Party Software
