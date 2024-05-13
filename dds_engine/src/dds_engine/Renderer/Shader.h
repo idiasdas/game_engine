@@ -2,19 +2,17 @@
 
 #include <string>
 
-namespace dds{
+namespace dds
+{
 
     class Shader
     {
     public:
-        Shader(const std::string& vertexSrc, const std::string& fragmentSrc);
+        static Shader *Create(const std::string &vertexSrc, const std::string &fragmentSrc);
 
-        ~Shader();
+        virtual ~Shader() {}
 
-        void Bind() const;
-        void Unbind() const;
-
-    private:
-        uint32_t m_RendererID;
+        virtual void Bind() const = 0;
+        virtual void Unbind() const = 0;
     };
 }
