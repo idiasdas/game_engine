@@ -19,7 +19,7 @@ namespace dds
         Bool
     };
 
-    static u_int32_t ShaderDataTypeSize(ShaderDataType type)
+    static uint32_t ShaderDataTypeSize(ShaderDataType type)
     {
         switch (type)
         {
@@ -43,8 +43,8 @@ namespace dds
     {
         std::string Name;
         ShaderDataType Type;
-        u_int32_t Size;
-        u_int32_t Offset;
+        uint32_t Size;
+        uint32_t Offset;
         bool Normalized;
 
         BufferElement() {}
@@ -54,7 +54,7 @@ namespace dds
         {
         }
 
-        u_int32_t GetElementCount() const
+        uint32_t GetElementCount() const
         {
             switch (Type)
             {
@@ -84,7 +84,7 @@ namespace dds
         }
 
         inline const std::vector<BufferElement> &GetElements() { return m_Elements; }
-        inline const u_int32_t &GetStride() const { return m_Stride; }
+        inline const uint32_t &GetStride() const { return m_Stride; }
 
         std::vector<BufferElement>::iterator begin() { return m_Elements.begin(); }
         std::vector<BufferElement>::iterator end() { return m_Elements.end(); }
@@ -93,7 +93,7 @@ namespace dds
     private:
         void CalculateOffsetAndStride()
         {
-            u_int32_t offset = 0;
+            uint32_t offset = 0;
             m_Stride = 0;
             for (auto &element : m_Elements)
             {
@@ -104,7 +104,7 @@ namespace dds
         }
 
     private:
-        u_int32_t m_Stride = 0;
+        uint32_t m_Stride = 0;
         std::vector<BufferElement> m_Elements;
     };
 

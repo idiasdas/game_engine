@@ -58,7 +58,7 @@ namespace dds
             // {ShaderDataType::Float3, "a_Normal"}
         });
 
-        u_int32_t index = 0;
+        uint32_t index = 0;
         const auto& layout = m_VertexBuffer->GetLayout();
         for( BufferElement element : layout)
         {
