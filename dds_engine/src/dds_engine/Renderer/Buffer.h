@@ -83,7 +83,7 @@ namespace dds
             CalculateOffsetAndStride();
         }
 
-        inline const std::vector<BufferElement> &GetElements() { return m_Elements; }
+        inline const std::vector<BufferElement> &GetElements() const { return m_Elements; }
         inline const uint32_t &GetStride() const { return m_Stride; }
 
         std::vector<BufferElement>::iterator begin() { return m_Elements.begin(); }
