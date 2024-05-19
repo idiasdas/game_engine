@@ -10,7 +10,7 @@ namespace dds{
     {
         switch(Renderer::GetAPI())
         {
-            case RendererAPI::OpenGL:
+            case RendererAPI::API::OpenGL:
                 return new OpenGLShader(vertexSrc, fragmentSrc);
             default:
                 DDS_CORE_ASSERT(false, "Renderer API not supported.");

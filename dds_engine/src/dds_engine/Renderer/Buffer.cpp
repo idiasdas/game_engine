@@ -10,7 +10,7 @@ namespace dds{
     {
         switch(Renderer::GetAPI())
         {
-            case RendererAPI::OpenGL:
+            case RendererAPI::API::OpenGL:
                 return new OpenGLVertexBuffer(vertices, size);
             default:
                 DDS_CORE_ASSERT(false, "Renderer API not supported.");
@@ -25,7 +25,7 @@ namespace dds{
     {
         switch(Renderer::GetAPI())
         {
-            case RendererAPI::OpenGL:
+            case RendererAPI::API::OpenGL:
                 return new OpenGLIndexBuffer(indices, size);
             default:
                 DDS_CORE_ASSERT(false, "Renderer API not supported.");

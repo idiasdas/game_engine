@@ -102,6 +102,9 @@ Just remember to configure CMake and build the project as described in the previ
     - VertexBuffer and IndexBuffer classes abstract OpenGL implementation for buffers.
     - TODO: Abtract shaders.
 - [x] **Episode 31:** Vertex Buffer Layout
+- [x] **Episode 32:** Vertex Array abstraction
+- [x] **Episode 33:** Renderer class to abstract OpenGL completely in Application.cpp.
+
 
 
 # Third-Party Software
