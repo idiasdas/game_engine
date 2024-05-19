@@ -12,6 +12,7 @@
 #include "dds_engine/Renderer/Buffer.h"
 #include "dds_engine/Renderer/Shader.h"
 #include "dds_engine/Renderer/VertexArray.h"
+#include "Renderer/Cameras.h"
 
 namespace dds
 {
@@ -47,6 +48,7 @@ namespace dds
         std::shared_ptr<Shader> m_Shader_nocolor;
         std::shared_ptr<VertexArray> m_SquareVA;
 
+        OrthographicCamera m_Camera;
     private:
         static Application *s_Instance;
     };
