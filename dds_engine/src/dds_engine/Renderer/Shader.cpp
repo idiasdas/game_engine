@@ -20,5 +20,4 @@ namespace dds{
         DDS_CORE_ASSERT(false, "Invalid Renderer API.");
         return nullptr;
     }
-
 }
