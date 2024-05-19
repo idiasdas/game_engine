@@ -34,8 +34,8 @@ namespace dds
         case ShaderDataType::Int3:      return 4 * 3;
         case ShaderDataType::Int4:      return 4 * 4;
         case ShaderDataType::Bool:      return 1;
+        default: DDS_CORE_ASSERT(false, "Unkown Shader Data Type");
         }
-        DDS_CORE_ASSERT(false, "Unkown Shader Data Type");
         return 0;
     }
 
@@ -69,7 +69,10 @@ namespace dds
             case ShaderDataType::Int3:      return 3;
             case ShaderDataType::Int4:      return 4;
             case ShaderDataType::Bool:      return 1;
+            default: DDS_CORE_ASSERT(false, "Unkown Element Data Type");
             }
+
+            return 0;
         }
     };
 

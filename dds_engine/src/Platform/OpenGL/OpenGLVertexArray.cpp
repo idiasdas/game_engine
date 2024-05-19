@@ -20,9 +20,8 @@ namespace dds {
             case ShaderDataType::Int3:      return GL_INT;
             case ShaderDataType::Int4:      return GL_INT;
             case ShaderDataType::Bool:      return GL_BOOL;
+            default: DDS_CORE_ASSERT(false, "Unknown Shader Data Type.");
         }
-
-        DDS_CORE_ASSERT(false, "Unknown Shader Data Type.");
 
         return 0;
     }
